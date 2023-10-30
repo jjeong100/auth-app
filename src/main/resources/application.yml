@@ -1,0 +1,17 @@
+server:
+  port: ${PORT}
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: trace
+    org.springframework.security.jackson2: INFO
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${JWK_SET_URL}
+          issuer-uri: ${ISSUER_URL}
